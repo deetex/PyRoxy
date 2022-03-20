@@ -139,7 +139,7 @@ class ProxySocket(socksocket):
                  type=-1,
                  proto=-1,
                  fileno=None):
-        super().__init__(family, type, proto, fileno)
+        super().__init__(family, type)
         if proxy.port:
             if proxy.user and proxy.password:
                 self.setproxy(proxy.type.asPySocksType(),
